@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    // Views on the left side
+    <TextView
+        android:id="@+id/tvWeightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Weight"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHeightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Height"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/tvWeightLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvWeightLabel" />
+
+    <TextView
+        android:id="@+id/tvBmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="BMI"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/tvWeightLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeightLabel" />
+
+    //View on right side
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Condition"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvWeightLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvBmi" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvWeightLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvWeightLabel"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvHeightLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvHeightLabel"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvBmiNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/tvBmi"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvBmi"
+        tools:text="16" />
+
+    <TextView
+        android:id="@+id/tvCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvStatus"
+        app:layout_constraintStart_toEndOf="@+id/tvStatus"
+        tools:text="Normal" />
+
+    <Button
+        android:id="@+id/btnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Calculate"
+        app:layout_constraintStart_toEndOf="@+id/tvBmiNumber"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
